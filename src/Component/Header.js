@@ -26,7 +26,7 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul className="flex p-3 m-3 space-x-8">
-          <li>Online Status: {onlineStatus ? "✅" : "🔴"}</li>
+          {/* <li>Online Status: {onlineStatus ? "✅" : "🔴"}</li> */}
           <li className="px-4">
             <Link to="/">Home</Link>
           </li>
@@ -44,7 +44,7 @@ const Header = () => {
             <Link to="/cart">Cart({cartItems.length})</Link>
           </li>
 
-          <button
+          {/* <button
             className="login"
             onClick={() => {
               btnNameReact === "Login"
@@ -53,9 +53,12 @@ const Header = () => {
             }}
           >
             {btnNameReact}
-          </button>
+          </button> */}
 
-          <li className="font-bold">{loggedInUser}</li>
+          <li className="font-bold">
+            {loggedInUser}
+            <span> {onlineStatus ? "🟢" : "🔴"}</span>
+          </li>
         </ul>
       </div>
     </div>

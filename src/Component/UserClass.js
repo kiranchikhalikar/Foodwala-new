@@ -27,7 +27,13 @@ class UserClass extends React.Component {
     debugger;
     return (
       <div className="user-card">
-        <img src={avatar_url} alt="profile_pic" width="200" height="200" />
+        <img
+          src={avatar_url}
+          className="ml-24"
+          alt="profile_pic"
+          width="343"
+          height="343"
+        />
         {/* <h2>Name: {this.state.userInfo.login}</h2> */}
         {/* <h3>Location: {this.state.userInfo.name}</h3> */}
         {/* <h4>Contact: kmchikhalikar96@gmail.com</h4> */}

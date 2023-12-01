@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import Header from "./Component/Header";
 import Body from "./Component/Body";
 import About from "./Component/About";
-import Contact from "./Component/Contact";
+import Contact from "./Component/ContactUs";
 // import Grocery from "./Component/Grocery";
 import Error from "./Component/Error";
 import RestaurantMenu from "./Component/RestaurantMenu";
@@ -13,6 +13,7 @@ import Footer from "./Component/Footer";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./Component/Cart";
+import ContactUs from "./Component/ContactUs";
 
 const Grocery = lazy(() => import("./Component/Grocery"));
 
@@ -57,7 +58,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: <ContactUs />,
       },
       {
         path: "/grocery",
