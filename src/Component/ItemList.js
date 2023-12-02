@@ -4,14 +4,12 @@ import { CDN_URL } from "../utils/constants";
 import { list } from "postcss";
 
 const ItemList = ({ items }) => {
-
   const dispatch = useDispatch();
-    
 
   const handleAddItem = (item) => {
     // Dispatch an action
-    dispatch(addItem(item ));
-  }
+    dispatch(addItem(item));
+  };
 
   return (
     <div>
@@ -19,8 +17,7 @@ const ItemList = ({ items }) => {
         {items.map((item) => (
           <div
             key={item.card.info.id}
-            className="m-2 p-2 border-gray -200 border-b-2 text-left flex justify-between"
-          >
+            className="m-2 p-2 border-gray -200 border-b-2 text-left flex justify-between">
             <div className="w-9/12">
               <div className="py-2">
                 <span>{item.card.info.name}</span>
@@ -37,8 +34,7 @@ const ItemList = ({ items }) => {
               <div className="absolute">
                 <button
                   className="p-1 mx-8 rounded-lg bg-black text-white shadow-lg mt-11"
-                  onClick={()=> handleAddItem(item)}
-                >
+                  onClick={() => handleAddItem(item)}>
                   Add +
                 </button>
               </div>
