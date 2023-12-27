@@ -21,18 +21,18 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.4694714&lng=73.8290409&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://delightful-red-coat.cyclic.app/api/proxy/swiggy/dapi/restaurants/list/v5?lat=18.4694714&lng=73.8290409&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
 
     const json = await data.json();
-
+    console.log(json);
     // Optional Chaining
 
     setListOfRestraunt(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestaurant(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
@@ -44,7 +44,7 @@ const Body = () => {
       </h1>
     );
 
-  return listOfRestaurants && listOfRestaurants.length === 0 ? (
+  return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">

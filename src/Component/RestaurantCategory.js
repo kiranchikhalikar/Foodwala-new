@@ -2,7 +2,6 @@ import { useState } from "react";
 import ItemList from "./ItemList";
 
 const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
- 
   const handleClick = () => {
     // setShowItems(!showItems)
     setShowIndex();
@@ -14,8 +13,7 @@ const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
         {/* Header */}
         <div
           className="flex justify-between cursor-pointer"
-          onClick={handleClick}
-        >
+          onClick={handleClick}>
           <span className="font-bold text-lg">
             {data.title} ({data?.itemCards?.length})
           </span>
